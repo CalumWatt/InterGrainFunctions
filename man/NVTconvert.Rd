@@ -2,7 +2,7 @@
 % Please edit documentation in R/NVTconvert.R
 \name{NVTconvert}
 \alias{NVTconvert}
-\title{A package to output NVT trial designs}
+\title{A function to output NVT trial designs}
 \usage{
 NVTconvert(x, Crop.Species, Sub.Series = NULL, Location, State, Code)
 }
