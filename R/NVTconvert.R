@@ -1,5 +1,5 @@
 
-#' A package to output NVT trial designs
+#' A function to output NVT trial designs
 #'
 #' NVTconvert takes an NVT provided wide format trial designs and outputs each individual trial as a figure for a user define crop species.
 #'
