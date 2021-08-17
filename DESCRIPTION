@@ -1,0 +1,19 @@
+Package: NVTconvert
+Type: Package
+Title: Create trial designs from NVT provide excel files
+Version: 0.0.1
+Depends: 
+    R (>= 3.1), tidyverse, readxl  
+Authors@R: 
+    person(given = "Calum",
+           family = "Watt",
+           role = c("aut", "cre"),
+           email = "cwatt@intergrain.com",
+           comment = c(ORCID = "0000-0003-2836-8168"))
+Description: NVTconvert creates trial designs for user stipulated crop species and crop subtypes based on input trial designs provided by National Variety Trial managers in wide format.These files typically contain many crop species (i.e. wheat, barley, oat) and subtypes (i.e. early, main, long). By stipulating what species and/or subtype you are interested inNVTconvert will create trial designs and output .jpeg files in a specially created directory. 
+License: `use_gpl3_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Date/Publication: 9th August 2021
