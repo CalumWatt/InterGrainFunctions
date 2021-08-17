@@ -5,7 +5,7 @@
 #'
 #' @param x A data.frame
 #' @param Crop.Species User define crop species i.e. Wheat. Needs to be character input...."Wheat"
-#' @param Sub.Series User defined crop sub-series. In wheat there are Durum, Early Season sub-series. Default is NULL.
+#' @param Sub.Series User defined crop sub-series. In wheat there are many different sub-series such as Durum or Main Season. Default is NULL.
 #' @param Location A character stipulating the name of the column containing the location data...."Site.Location"
 #' @param State A character stipulating the name of the column containing the state data...."State"
 #' @param Code A character stipulating the name of the colunn containing the trialname data...."Trial.Name"
