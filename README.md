@@ -2,6 +2,8 @@
 
 ### The `InterGrainFunctions` package contains a list of functions to improve the timeliness, reliability and repeatability of common tasks carried out within the breeding program. These include routine production of trial designs from NVT supplied excel files using `NVTconvert` or file format conversion using `FieldScorer`.
 
+#### This package and suite of functions is very much in the development phase
+
 # Functions
 ### 1. NVTconvert was developed for the sole purpose of making `Allan Rattey's` life easier.
 
