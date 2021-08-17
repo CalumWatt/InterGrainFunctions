@@ -11,7 +11,7 @@ NVTconvert(x, Crop.Species, Sub.Series = NULL, Location, State, Code)
 
 \item{Crop.Species}{User define crop species i.e. Wheat. Needs to be character input...."Wheat"}
 
-\item{Sub.Series}{User defined crop sub-series. In wheat there are Durum, Early Season sub-series. Default is NULL.}
+\item{Sub.Series}{User defined crop sub-series. In wheat there are differne sub-series such as Durum. Default is NULL and will plot everything for a particular crop species.}
 
 \item{Location}{A character stipulating the name of the column containing the location data...."Site.Location"}
 
@@ -24,6 +24,13 @@ Long format data frame and .jpeg trial design figures.
 }
 \description{
 NVTconvert takes an NVT provided wide format trial designs and outputs each individual trial as a figure for a user define crop species.
+}
+\examples{
+NVTconvert(data, 
+      Crop.Species = "Wheat",
+      Sub.Series = "Main Season", 
+      Location = "SiteDescription", 
+      State = "State", Code = "TrialCode")
 }
 \author{
 Calum Watt, \email{cwatt@intergrain.com}

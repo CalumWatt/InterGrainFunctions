@@ -5,15 +5,22 @@
 #'
 #' @param x A data.frame
 #' @param Crop.Species User define crop species i.e. Wheat. Needs to be character input...."Wheat"
-#' @param Sub.Series User defined crop sub-series. In wheat there are many different sub-series such as Durum or Main Season. Default is NULL.
+#' @param Sub.Series User defined crop sub-series. In wheat there are differne sub-series such as Durum. Default is NULL and will plot everything for a particular crop species.
 #' @param Location A character stipulating the name of the column containing the location data...."Site.Location"
 #' @param State A character stipulating the name of the column containing the state data...."State"
 #' @param Code A character stipulating the name of the colunn containing the trialname data...."Trial.Name"
+#'
 #'
 #' @return Long format data frame and .jpeg trial design figures.
 #'
 #' @author Calum Watt, \email{cwatt@@intergrain.com}
 #' @keywords utilities
+#' @examples 
+#' NVTconvert(data, 
+#'       Crop.Species = "Wheat",
+#'       Sub.Series = "Main Season", 
+#'       Location = "SiteDescription", 
+#'       State = "State", Code = "TrialCode")
 #' @export
 NVTconvert <- function(x, Crop.Species, Sub.Series = NULL, Location, State, Code){
 
