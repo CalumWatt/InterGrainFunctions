@@ -15,11 +15,12 @@
 #'
 #' @author Calum Watt, \email{cwatt@@intergrain.com}
 #' @keywords utilities
-#' @example NVTconvert(data, 
-           Crop.Species = "Wheat",
-           Sub.Series = "Main Season", 
-           Location = "SiteDescription", 
-           State = "State", Code = "TrialCode")
+#' @examples 
+#' NVTconvert(data, 
+#'          Crop.Species = "Wheat",
+#'           Sub.Series = "Main Season", 
+#'           Location = "SiteDescription", 
+#'           State = "State", Code = "TrialCode")
 #' @export
 NVTconvert <- function(x, Crop.Species, Sub.Series = NULL, Location, State, Code){
 
