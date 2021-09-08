@@ -40,7 +40,7 @@ Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype){
   x$Genotype <- x[[Genotype]]
   x$Zad <- ""
   
-  x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype", "Zad")]
+  x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype","pedigree", "Zad")]
   
   x <- x[!duplicated(x[,c("Experiment", "Column", "Row")]),]
   
