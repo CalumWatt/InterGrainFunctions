@@ -16,12 +16,6 @@ Fieldscorer(x, Experiment, Trialtype, Barcode = NULL, Genotype)
 \item{Genotype}{A character string indexing the column that contains genotype names.}
 
 \item{plotbarcode}{A character string indexing column that contains plot barcodes.}
-
-\item{Column}{A character string indexing the column that contains information pertaining to ranges. Fieldscorer accepts "Column" only.}
-
-\item{Row}{A character string indexing the column that contains information pertaining to rows.}
-
-\item{Pedigree}{A character string indexing the column that contains pedigree information.}
 }
 \value{
 File format suitable for upload into the Fieldscorer app.
@@ -36,10 +30,7 @@ Fieldscorer(data,
       Experiment = "trial.name",
       Trialtype = "21WS2E", 
       Barcode = "plot.barcode", 
-      Column = "pcol", 
-      Row = "prow",
-      Genotype = "name",
-      Pedigree = "pedigree")
+      Genotype = "name")
 }
 \author{
 Calum Watt, \email{cwatt@intergrain.com}
