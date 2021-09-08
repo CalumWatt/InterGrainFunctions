@@ -21,3 +21,17 @@ NVTconvert(data.frame,
 ```
  
 <img src="https://github.com/CalumWatt/NVTconvert/blob/1a88d84337d08c1363d7f23971d788a8ebce449d/figs/Ballidu%20-%20WA%20-%20WMaA21BALL6%20-%20Main%20Season%20.jpeg" width="500px">
+
+### 2. Fieldscorer takes .xls trial designs in Agrobase format and spits out files in a suitable format for the Fieldscorer app. 
+
+Within the function lies a loop which will create Fieldscorer files for each experiment in the .xls file. It is preferable to save Agrobase files by series i.e. "21WS0E" so that the `Trialtype =` argument can be used although this is not necessary and can be omitted from the call to Fieldscorer.
+
+An example .xls file exists in the data directory for `InterGrainFunctions`. The file contains two 2021 trials from Corrigin and calling.....
+```
+Fieldscorer(data, Experiment = "expt",
+            Trialtype = "21WS1",
+            Genotype = "name",
+            Barcode = "barcode",
+            Pedigree = NULL)
+```
+will result in the creation of two files, one for each trial. 
