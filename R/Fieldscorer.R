@@ -21,7 +21,8 @@
 #'       Experiment = "trial.name",
 #'       Trialtype = "21WS2E", 
 #'       Barcode = "plot.barcode", 
-#'       Genotype = "name")
+#'       Genotype = "name",
+#'       Pedigree = "pedigree")
 #' @export
 #' 
 Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedigree){
@@ -39,10 +40,10 @@ Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedi
   Rowcol <- colnames(x[,grep("prow", colnames(x), ignore.case = TRUE)])
   x$Row <- x[[Rowcol]]
   x$Genotype <- x[[Genotype]]
-  x$pedigree <- x[[Pedigree]]
+  x$Pedigree <- x[[Pedigree]]
   x$Zad <- ""
   
-  x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype","pedigree", "Zad")]
+  x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype","Pedigree", "Zad")]
   
   x <- x[!duplicated(x[,c("Experiment", "Column", "Row")]),]
   

@@ -32,7 +32,8 @@ Fieldscorer(data,
       Experiment = "trial.name",
       Trialtype = "21WS2E", 
       Barcode = "plot.barcode", 
-      Genotype = "name")
+      Genotype = "name",
+      Pedigree = "pedigree")
 }
 \author{
 Calum Watt, \email{cwatt@intergrain.com}
