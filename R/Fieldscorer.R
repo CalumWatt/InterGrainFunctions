@@ -17,6 +17,8 @@
 #' @author Calum Watt, \email{cwatt@@intergrain.com}
 #' @keywords utilities
 #' @examples 
+#' data <- read_xls("agrobasepractice.xls")
+#' 
 #' Fieldscorer(data, 
 #'       Experiment = "trial.name",
 #'       Trialtype = "21WS2E", 
