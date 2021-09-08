@@ -6,10 +6,7 @@
 #' @param Experiment A character string indexing column that contains trial names.
 #' @param Trialtype A character string to represent trial series. For example "21WS2E".
 #' @param plotbarcode A character string indexing column that contains plot barcodes.
-#' @param Column A character string indexing the column that contains information pertaining to ranges. Fieldscorer accepts "Column" only.
-#' @param Row A character string indexing the column that contains information pertaining to rows.
 #' @param Genotype A character string indexing the column that contains genotype names.
-#' @param Pedigree  A character string indexing the column that contains pedigree information.
 #'
 #'
 #' @return File format suitable for upload into the Fieldscorer app.
@@ -23,10 +20,7 @@
 #'       Experiment = "trial.name",
 #'       Trialtype = "21WS2E", 
 #'       Barcode = "plot.barcode", 
-#'       Column = "pcol", 
-#'       Row = "prow",
-#'       Genotype = "name",
-#'       Pedigree = "pedigree")
+#'       Genotype = "name")
 #' @export
 #' 
 Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype){
@@ -56,10 +50,10 @@ Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype){
   
   n = 1
   for (i in 1:trial_number) {
-    fileName = paste(trials,".csv", sep = "")
-    x = subset(x, x$Experiment == trials[i])
-    x = x[order(x$Column,x$Row),]
-    write.csv(x, fileName, row.names=F, na="",quote=FALSE)
+    fileName = paste(trials[i],".csv", sep = "")
+    tmp.df = subset(x, x$Experiment == trials[i])
+    tmp.df = tmp.df[order(tmp.df$Column,tmp.df$Row),]
+    write.csv(tmp.df, fileName, row.names=F, na="",quote=FALSE)
     
   }
 }
