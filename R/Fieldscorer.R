@@ -7,6 +7,7 @@
 #' @param Trialtype A character string to represent trial series. For example "21WS2E".
 #' @param plotbarcode A character string indexing column that contains plot barcodes.
 #' @param Genotype A character string indexing the column that contains genotype names.
+#' @param Pedigree A cvharacter string indexing the column that contains pedigree information.
 #'
 #'
 #' @return File format suitable for upload into the Fieldscorer app.
@@ -38,6 +39,7 @@ Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype){
   Rowcol <- colnames(x[,grep("prow", colnames(x), ignore.case = TRUE)])
   x$Row <- x[[Rowcol]]
   x$Genotype <- x[[Genotype]]
+  x$pedigree <- x[[Pedigree]]
   x$Zad <- ""
   
   x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype","pedigree", "Zad")]
