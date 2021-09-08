@@ -34,4 +34,4 @@ Fieldscorer(data, Experiment = "expt",
             Barcode = "barcode",
             Pedigree = NULL)
 ```
-will result in the creation of two files, one for each trial. 
+will result in the creation of two files, one for each trial. Defaulting `Pedigree` as NULL is important because we may wish to create Fieldscorer files for third parties where we may wish to omit this level of information.
