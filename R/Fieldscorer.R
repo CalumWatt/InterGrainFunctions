@@ -24,7 +24,7 @@
 #'       Genotype = "name")
 #' @export
 #' 
-Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype){
+Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedigree){
   x$Trialtype <- Trialtype
   if(is.null(Barcode))
     x
