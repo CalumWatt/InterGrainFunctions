@@ -4,7 +4,7 @@
 \alias{Fieldscorer}
 \title{A package to convert Agrobase output files into Fieldscorer input files}
 \usage{
-Fieldscorer(x, Experiment, Trialtype, Barcode = NULL, Genotype)
+Fieldscorer(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedigree)
 }
 \arguments{
 \item{x}{A data.frame.}
@@ -15,9 +15,9 @@ Fieldscorer(x, Experiment, Trialtype, Barcode = NULL, Genotype)
 
 \item{Genotype}{A character string indexing the column that contains genotype names.}
 
-\item{plotbarcode}{A character string indexing column that contains plot barcodes.}
-
 \item{Pedigree}{A cvharacter string indexing the column that contains pedigree information.}
+
+\item{plotbarcode}{A character string indexing column that contains plot barcodes.}
 }
 \value{
 File format suitable for upload into the Fieldscorer app.
