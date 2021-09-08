@@ -30,6 +30,8 @@ File format suitable for upload into the Fieldscorer app.
 Fieldscorer takes an output file from Agrobase and converts it into a fieldscorer format.
 }
 \examples{
+data <- read_xls("agrobasepractice.xls")
+
 Fieldscorer(data, 
       Experiment = "trial.name",
       Trialtype = "21WS2E", 
