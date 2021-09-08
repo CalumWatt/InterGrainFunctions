@@ -3,7 +3,7 @@ Type: Package
 Title: Streamline routine tasks within IG's breeding programs.
 Version: 0.0.1
 Depends: 
-    R (>= 3.1), tidyverse, readxl  
+    R (>= 3.1), tidyverse, readxl, lubridate  
 Authors@R: 
     person(given = "Calum",
            family = "Watt",
