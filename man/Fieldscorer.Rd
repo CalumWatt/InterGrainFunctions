@@ -4,7 +4,7 @@
 \alias{Fieldscorer}
 \title{A package to convert Agrobase output files into Fieldscorer input files}
 \usage{
-Fieldscorer(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedigree)
+Fieldscorer(x, Experiment, Trialtype, Barcode, Genotype, Pedigree = NULL)
 }
 \arguments{
 \item{x}{A data.frame.}
@@ -15,7 +15,7 @@ Fieldscorer(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedigree)
 
 \item{Genotype}{A character string indexing the column that contains genotype names.}
 
-\item{Pedigree}{A cvharacter string indexing the column that contains pedigree information.}
+\item{Pedigree}{A cvharacter string indexing the column that contains pedigree information. Default is NULL as we may want Fieldscorer files without this information for third party use.}
 
 \item{plotbarcode}{A character string indexing column that contains plot barcodes.}
 }

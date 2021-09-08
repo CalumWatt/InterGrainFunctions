@@ -7,7 +7,7 @@
 #' @param Trialtype A character string to represent trial series. For example "21WS2E".
 #' @param plotbarcode A character string indexing column that contains plot barcodes.
 #' @param Genotype A character string indexing the column that contains genotype names.
-#' @param Pedigree A cvharacter string indexing the column that contains pedigree information.
+#' @param Pedigree A cvharacter string indexing the column that contains pedigree information. Default is NULL as we may want Fieldscorer files without this information for third party use.
 #'
 #'
 #' @return File format suitable for upload into the Fieldscorer app.
@@ -25,7 +25,7 @@
 #'       Pedigree = "pedigree")
 #' @export
 #' 
-Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedigree){
+Fieldscorer <- function(x, Experiment, Trialtype, Barcode, Genotype, Pedigree = NULL){
   x$Trialtype <- Trialtype
   if(is.null(Barcode))
     x
@@ -40,12 +40,19 @@ Fieldscorer <- function(x, Experiment, Trialtype, Barcode = NULL, Genotype, Pedi
   Rowcol <- colnames(x[,grep("prow", colnames(x), ignore.case = TRUE)])
   x$Row <- x[[Rowcol]]
   x$Genotype <- x[[Genotype]]
-  x$Pedigree <- x[[Pedigree]]
+  if(is.null(Pedigree))
+    x
+  else(
+    x$Pedigree <- x[[Pedigree]]
+  )
   x$Zad <- ""
   
-  x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype","Pedigree", "Zad")]
-  
-  x <- x[!duplicated(x[,c("Experiment", "Column", "Row")]),]
+  if(is.null(Pedigree))
+    x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype", "Zad")]
+  else(
+   x <- x[,c("Experiment", "SiteYear", "Trialtype","PlotBarcode", "Column", "Row", "Genotype","Pedigree", "Zad")]
+  )
+   x <- x[!duplicated(x[,c("Experiment", "Column", "Row")]),]
   
   x <- x[order(x$SiteYear, x$Experiment, x$Column, x$Row),]
   trials <- unique(x$Experiment)
