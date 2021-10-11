@@ -28,6 +28,7 @@ Within the function lies a loop which will create Fieldscorer files for each exp
 An example .xls file exists in the data directory for `InterGrainFunctions`. The file contains two 2021 trials from Corrigin and calling.....
 
 ```
+data <- read_xls("agrobasepractice.xls")
 Fieldscorer(data, Experiment = "expt", Trialtype = "21WS1", Genotype = "name", Barcode = "barcode", Pedigree = NULL)
 ```
 
