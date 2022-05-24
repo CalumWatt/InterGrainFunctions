@@ -30,9 +30,9 @@ An example .xls file exists in the data directory for `InterGrainFunctions`. The
 ```
 library("InterGrainFunctions")
 
-data <- data(agrobasepractice)
+data(agrobasepractice)
 
-Fieldscorer(data, Experiment = "expt", Trialtype = "21WS1", Genotype = "name", Barcode = "barcode", Pedigree = NULL)
+Fieldscorer(agrobasepractice, Experiment = "expt", Trialtype = "21WS1", Genotype = "name", Barcode = "barcode", Pedigree = NULL)
 ```
 
 will result in the creation of two files, one for each trial. Defaulting `Pedigree` as NULL is important because we may wish to create Fieldscorer files for third parties where we may wish to omit this level of information.
