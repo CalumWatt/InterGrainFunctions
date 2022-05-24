@@ -30,7 +30,7 @@ An example .xls file exists in the data directory for `InterGrainFunctions`. The
 ```
 library("InterGrainFunctions")
 
-data(agrobasepractice)
+data(agrobasepractice) #Data is imported as data.frame, however Fieldscorer function will crash and instead requires as.tibble
 
 Fieldscorer(agrobasepractice, Experiment = "expt", Trialtype = "21WS1", Genotype = "name", Barcode = "barcode", Pedigree = NULL)
 ```
